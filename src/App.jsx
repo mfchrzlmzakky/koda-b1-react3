@@ -1,3 +1,11 @@
+/**
+ * @type {[string, function(string): void]} - menyimpan kata kunci pencarian dari input
+ * @type {[User[], function(User[]): void]} - menyimpan data hasil fetch API
+ * @type {useEffect} - Ambil data sekali saja
+ * @type {User[]} - Berisi data sesuai kata kunci di search
+ * @returns {JSX.elemet} - Tampilan daftar user & kolom pencarian
+ */
+
 import { useEffect, useState } from "react";
 import GetData from "./components/GetData";
 
@@ -14,7 +22,7 @@ function App() {
   // const filteredUsers = users.filter((user) => user.name.toLowerCase().includes(search.toLowerCase()));
   return (
     <main>
-      <h1 className="text-center mb-5">Daftar Pengguna</h1>
+      <h1 className="text-center mb-5">Daftar User</h1>
 
       <input type="text" placeholder="Cari nama..." value={search} onChange={(n) => setSearch(n.target.value)} className="p-1 border rounded-sm mb-5 w-full" />
 
